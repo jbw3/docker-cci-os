@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM ubuntu:16.04
 
 # install NASM
 RUN apt-get update
