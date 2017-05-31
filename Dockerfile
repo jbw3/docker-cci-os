@@ -16,3 +16,4 @@ RUN apt-get install -y nasm
 # build cross compiler
 ADD build-gcc.py build-gcc.py
 RUN ./build-gcc.py --no-cache -t i686-elf x86_64-elf
+ENV PATH=${PATH}:/root/opt/cross/gcc-6.3.0/bin
