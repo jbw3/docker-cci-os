@@ -3,17 +3,17 @@ FROM ubuntu:16.04
 WORKDIR /home
 
 # install dependencies
-RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install -y g++
-RUN apt-get install -y make
-RUN apt-get install -y wget
-RUN apt-get install -y bzip2
-
-# install NASM
-RUN apt-get install -y nasm
+RUN apt-get update && apt-get install -y \
+bzip2 \
+g++ \
+git \
+make \
+nasm \
+python3 \
+ssh \
+wget
 
 # build cross compiler
 ADD build-gcc.py build-gcc.py
 RUN ./build-gcc.py --no-cache -t i686-elf x86_64-elf
-ENV PATH=${PATH}:/root/opt/cross/gcc-6.3.0/bin
+ENV PATH=${PATH}:/root/opt/cross/gcc-7.2.0/bin
