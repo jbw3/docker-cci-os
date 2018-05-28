@@ -10,6 +10,7 @@ git \
 make \
 nasm \
 python3 \
+qemu \
 ssh \
 wget
 
