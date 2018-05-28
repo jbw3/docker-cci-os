@@ -7,12 +7,15 @@ RUN apt-get update && apt-get install -y \
 bzip2 \
 g++ \
 git \
+grub-common \
+grub-pc-bin \
 make \
 nasm \
 python3 \
 qemu \
 ssh \
-wget
+wget \
+xorriso
 
 # build cross compiler
 ADD build-gcc.py build-gcc.py
